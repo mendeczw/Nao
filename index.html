@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Visual Report – William Méndez Cerdas | Analista de Datos para Call Centers</title>
+  <meta name="description" content="Analítica de datos para call centers: dashboards ejecutivos en Power BI/Excel, automatización con VBA y Python, limpieza y segmentación en SQL.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; }
+  </style>
+</head>
+<body class="min-h-screen w-full bg-gray-50 text-gray-800">
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-30 w-full bg-white/80 backdrop-blur border-b border-gray-200">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-2xl bg-gray-900 text-white grid place-items-center font-semibold">VR</div>
+        <div class="leading-tight">
+          <p class="text-sm font-semibold">Visual Report</p>
+          <p class="text-xs text-gray-500">Analítica de Datos para Call Centers</p>
+        </div>
+      </div>
+      <div class="hidden gap-6 text-sm font-medium sm:flex">
+        <a href="#servicios" class="hover:text-gray-900 text-gray-600">Servicios</a>
+        <a href="#valor" class="hover:text-gray-900 text-gray-600">Propuesta de valor</a>
+        <a href="#precios" class="hover:text-gray-900 text-gray-600">Precios</a>
+        <a href="#portafolio" class="hover:text-gray-900 text-gray-600">Portafolio</a>
+        <a href="#contacto" class="hover:text-gray-900 text-gray-600">Contacto</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="#contacto" class="rounded-2xl border border-gray-900 px-4 py-2 text-sm font-semibold hover:bg-gray-900 hover:text-white transition">Agenda una demo</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-br from-gray-100 via-white to-gray-100"></div>
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
+      <div class="flex flex-col justify-center">
+        <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
+          Visual Report — <span class="text-gray-900">William Méndez Cerdas</span>
+        </h1>
+        <p class="mt-4 max-w-xl text-base sm:text-lg text-gray-600">
+          Analista de Datos y Desarrollador de Aplicaciones para <strong>call centers</strong>.
+          Transformo datos crudos en <strong>reportes ejecutivos</strong> y <strong>dashboards automatizados</strong> que aceleran la toma de decisiones.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-gray-700">
+          <li>• MCI, Árbol de Efectividad, Contactabilidad, Conversión</li>
+          <li>• Power BI, Excel (VBA), SQL Server, Python</li>
+          <li>• Integraciones y automatización punta a punta</li>
+        </ul>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#contacto" class="rounded-2xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white shadow hover:shadow-md">Solicitar propuesta</a>
+          <a href="#portafolio" class="rounded-2xl border border-gray-300 px-5 py-3 text-sm font-semibold text-gray-700 hover:bg-white">Ver portafolio</a>
+        </div>
+      </div>
+      <div class="grid content-center">
+        <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="rounded-2xl border border-gray-200 p-4">
+              <p class="text-xs text-gray-500">Contactabilidad</p>
+              <p class="mt-1 text-2xl font-bold">+35%</p>
+              <p class="text-xs text-gray-500">tras optimizar horarios</p>
+            </div>
+            <div class="rounded-2xl border border-gray-200 p-4">
+              <p class="text-xs text-gray-500">Tiempo de reporte</p>
+              <p class="mt-1 text-2xl font-bold">-80%</p>
+              <p class="text-xs text-gray-500">con automatización</p>
+            </div>
+            <div class="rounded-2xl border border-gray-200 p-4">
+              <p class="text-xs text-gray-500">Conversión</p>
+              <p class="mt-1 text-2xl font-bold">+12%</p>
+              <p class="text-xs text-gray-500">medición y seguimiento</p>
+            </div>
+            <div class="rounded-2xl border border-gray-200 p-4">
+              <p class="text-xs text-gray-500">Calidad de datos</p>
+              <p class="mt-1 text-2xl font-bold">99.5%</p>
+              <p class="text-xs text-gray-500">depuración y trazabilidad</p>
+            </div>
+          </div>
+          <p class="mt-5 text-xs text-gray-500">* KPI de referencia para propuestas; se ajustan a cada operación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+    <div class="mb-8 flex items-end justify-between">
+      <h2 class="text-2xl font-bold">Servicios para Call Centers</h2>
+      <span class="text-xs text-gray-500">Exactitud • Velocidad • Claridad • Integración</span>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Cards -->
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold">Dashboards Ejecutivos</h3>
+        <p class="mt-2 text-sm text-gray-600">Power BI y Excel con KPIs de gestión, contactabilidad, efectividad y conversión. Actualización automatizada.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• Diseño ejecutivo</li>
+          <li>• Conexión a múltiples fuentes</li>
+          <li>• Alertas y cortes horarios</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold">Automatización (VBA &amp; Python)</h3>
+        <p class="mt-2 text-sm text-gray-600">Formularios de control, exportación a PDF, envío programado y flujos de trabajo sin fricción.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• Macros MCI/Árbol</li>
+          <li>• Tareas batch</li>
+          <li>• Integración con correo</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold">Limpieza &amp; Segmentación (SQL)</h3>
+        <p class="mt-2 text-sm text-gray-600">Depuración de duplicados, estandarización de campos y segmentación por campañas o perfiles.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• CTEs y vistas</li>
+          <li>• Trazabilidad de cambios</li>
+          <li>• Calidad de datos</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold">Consultoría Analítica</h3>
+        <p class="mt-2 text-sm text-gray-600">Estructura de medición, diagnóstico de procesos y entrenamiento en lectura de reportes.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• Blueprint de KPIs</li>
+          <li>• Guías de interpretación</li>
+          <li>• Onboarding de equipos</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold">Integraciones</h3>
+        <p class="mt-2 text-sm text-gray-600">SQL Server, Excel, Google Sheets. Consolidación y gobierno de datos para evitar reprocesos.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• Pipelines confiables</li>
+          <li>• Catálogo de datos</li>
+          <li>• Auditoría</li>
+        </ul>
+      </div>
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-semibold">Soporte &amp; Mantenimiento</h3>
+        <p class="mt-2 text-sm text-gray-600">Ajustes, mejoras evolutivas y soporte ejecutivo mensual.</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• SLA claro</li>
+          <li>• Monitoreo</li>
+          <li>• Roadmap trimestral</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPUESTA DE VALOR -->
+  <section id="valor" class="bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <h2 class="text-2xl font-bold">Propuesta de valor</h2>
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <div class="rounded-3xl border border-gray-200 p-6">
+          <p class="text-sm text-gray-700">
+            Análisis listos para la acción. KPI auditables, visuales ejecutivos y automatización que reduce tiempos
+            operativos. Así las cosas, su equipo obtiene <strong>eficiencia, control y visibilidad inmediata</strong>.
+          </p>
+          <ul class="mt-4 grid gap-2 text-sm text-gray-700">
+            <li>• Exactitud y trazabilidad</li>
+            <li>• Velocidad de entrega</li>
+            <li>• Claridad visual</li>
+            <li>• Integración con sus fuentes</li>
+          </ul>
+        </div>
+        <div class="rounded-3xl border border-gray-200 p-6">
+          <h3 class="text-sm font-semibold text-gray-500">Casos de uso frecuentes</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-700">
+            <li>• Tableros MCI y Árbol de Efectividad</li>
+            <li>• Control de ventas por campaña/supervisor</li>
+            <li>• Seguimiento de intentos, contactados y conversión</li>
+            <li>• Depuración de bases y actualización diaria</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIOS -->
+  <section id="precios" class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+    <h2 class="text-2xl font-bold">Modelo de precios</h2>
+    <p class="mt-2 text-sm text-gray-600">Valores de referencia en CRC; se ajustan por complejidad, volumen y nivel de automatización.</p>
+    <div class="mt-6 grid gap-6 md:grid-cols-3">
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <p class="text-sm font-semibold text-gray-500">Básico</p>
+        <p class="mt-1 text-2xl font-bold">₡50 000 – ₡80 000</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• Reporte único</li>
+          <li>• Actualización manual</li>
+          <li>• Entrega en PDF</li>
+        </ul>
+        <a href="#contacto" class="mt-5 inline-block rounded-2xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white">Solicitar</a>
+      </div>
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <p class="text-sm font-semibold text-gray-500">Intermedio</p>
+        <p class="mt-1 text-2xl font-bold">₡100 000 – ₡180 000</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• Dashboard automatizado</li>
+          <li>• Formularios VBA</li>
+          <li>• Conexión a fuentes</li>
+        </ul>
+        <a href="#contacto" class="mt-5 inline-block rounded-2xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white">Cotizar</a>
+      </div>
+      <div class="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+        <p class="text-sm font-semibold text-gray-500">Avanzado</p>
+        <p class="mt-1 text-2xl font-bold">Desde ₡200 000</p>
+        <ul class="mt-4 space-y-1 text-sm text-gray-700">
+          <li>• Plataforma completa</li>
+          <li>• Integración SQL/Python</li>
+          <li>• Soporte de implementación</li>
+        </ul>
+        <a href="#contacto" class="mt-5 inline-block rounded-2xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white">Agendar demo</a>
+      </div>
+    </div>
+    <div class="mt-4 rounded-2xl bg-gray-100 p-4 text-xs text-gray-600">
+      <p>Mantenimiento mensual sugerido: <strong>₡60 000</strong> (SLA, ajustes y mejoras evolutivas).</p>
+    </div>
+  </section>
+
+  <!-- PORTAFOLIO -->
+  <section id="portafolio" class="bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <h2 class="text-2xl font-bold">Portafolio (muestras)</h2>
+      <p class="mt-2 text-sm text-gray-600">Ejemplos representativos. Reemplace por imágenes reales de dashboards.</p>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <!-- 6 placeholders -->
+        <div class="rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-sm text-gray-500">Dashboard #1</div>
+          <p class="mt-3 text-sm font-semibold">KPI de gestión</p>
+          <p class="text-xs text-gray-600">Contactabilidad y efectividad.</p>
+        </div>
+        <div class="rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-sm text-gray-500">Dashboard #2</div>
+          <p class="mt-3 text-sm font-semibold">Ventas por campaña</p>
+          <p class="text-xs text-gray-600">MTD / YTD • cortes horarios.</p>
+        </div>
+        <div class="rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="aspect-[16/10] w-full rounded-2l bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-sm text-gray-500">Dashboard #3</div>
+          <p class="mt-3 text-sm font-semibold">Árbol de Efectividad</p>
+          <p class="text-xs text-gray-600">Penetración y conversión.</p>
+        </div>
+        <div class="rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-sm text-gray-500">Dashboard #4</div>
+          <p class="mt-3 text-sm font-semibold">Calidad de datos</p>
+          <p class="text-xs text-gray-600">Duplicados y estandarización.</p>
+        </div>
+        <div class="rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-sm text-gray-500">Dashboard #5</div>
+          <p class="mt-3 text-sm font-semibold">Seguimiento operativo</p>
+          <p class="text-xs text-gray-600">Intentos y contactados.</p>
+        </div>
+        <div class="rounded-3xl border border-gray-200 bg-white p-4 shadow-sm">
+          <div class="aspect-[16/10] w-full rounded-2xl bg-gradient-to-br from-gray-100 to-gray-200 grid place-items-center text-sm text-gray-500">Dashboard #6</div>
+          <p class="mt-3 text-sm font-semibold">Conversión</p>
+          <p class="text-xs text-gray-600">Embudo por estado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+    <div class="rounded-3xl bg-gray-900 p-8 text-white shadow-sm">
+      <div class="grid gap-6 md:grid-cols-2 md:items-center">
+        <div>
+          <h3 class="text-2xl font-bold">Listo para acelerar su operación</h3>
+          <p class="mt-2 text-sm text-gray-200">Propuesta en 24–48 h con alcance, tiempos y costos claros.</p>
+        </div>
+        <div class="md:justify-self-end">
+          <a href="#contacto" class="inline-block rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-gray-900">Agenda una demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-white">
+    <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6">
+      <h2 class="text-2xl font-bold">Contacto</h2>
+      <div class="mt-6 grid gap-8 lg:grid-cols-2">
+        <div class="rounded-3xl border border-gray-200 p-6">
+          <p class="text-sm text-gray-700">Envíe un mensaje para coordinar una reunión o solicitar una propuesta.</p>
+          <form class="mt-6 grid gap-4" onsubmit="event.preventDefault(); alert('Gracias, su mensaje ha sido registrado (demo).');">
+            <input class="w-full rounded-xl border border-gray-300 p-3 text-sm outline-none focus:ring-2 focus:ring-gray-900" placeholder="Nombre" required/>
+            <input class="w-full rounded-xl border border-gray-300 p-3 text-sm outline-none focus:ring-2 focus:ring-gray-900" placeholder="Correo" type="email" required/>
+            <textarea class="w-full rounded-xl border border-gray-300 p-3 text-sm outline-none focus:ring-2 focus:ring-gray-900" placeholder="Mensaje" rows="4" required></textarea>
+            <button type="submit" class="rounded-xl bg-gray-900 px-5 py-3 text-sm font-semibold text-white">Enviar</button>
+          </form>
+          <p class="mt-4 text-xs text-gray-500">*Formulario demostrativo. Conectar a un servicio de correo/back-end para producción.</p>
+        </div>
+        <div class="rounded-3xl border border-gray-200 p-6">
+          <h3 class="text-sm font-semibold text-gray-500">Datos de contacto</h3>
+          <ul class="mt-3 space-y-1 text-sm text-gray-700">
+            <li>• William Méndez Cerdas – Analista de Datos</li>
+            <li>• Correo: <a class="underline" href="mailto:mendezcer@gmail.com">mendezcer@gmail.com</a></li>
+            <li>• WhatsApp: <a class="underline" href="https://wa.me/50685369305" target="_blank" rel="noreferrer">+506 8536 9305</a></li>
+            <li>• Ubicación: Costa Rica</li>
+          </ul>
+          <div class="mt-6 rounded-2xl bg-gray-50 p-4 text-xs text-gray-600">
+            <p>Firmo los reportes con sello profesional y entrego guía ejecutiva para su lectura.</p>
+            <p class="mt-1">Opcional: NDA / acuerdo de confidencialidad a solicitud.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-top border-gray-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-8 text-xs text-gray-500 sm:px-6 sm:flex-row sm:items-center sm:justify-between">
+      <p>© <span id="year"></span> Visual Report – William Méndez Cerdas. Todos los derechos reservados.</p>
+      <p>"Transformando datos en decisiones"</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
